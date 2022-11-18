@@ -13,6 +13,7 @@
   --logo-color: #000000;
   --bgd-button-hero-active: #188ce8;
   --line: #ececec;
+  --border-cokor: #eeeeee;
 }
 
 body {
@@ -38,6 +39,11 @@ h4,
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* Header */
@@ -207,6 +213,11 @@ p {
 .advantage {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+}
+
+.advantage .list {
+  flex-basis: calc((100% - 30px) / 4);
 }
 
 .lists-subtitle {
@@ -259,8 +270,12 @@ p {
   background-color: var(--element-color);
 }
 
+.format-descr {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .lists-subject {
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -270,7 +285,6 @@ p {
 }
 
 .section-descr.prof {
-  margin-bottom: 30px;
   color: var(--descr-text-color);
 
   font-size: 16px;
@@ -370,26 +384,18 @@ p {
 .list-photo {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
-.list-photo .list {
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.list-photo .list:nth-child(3n) {
-  margin-right: 0;
-}
-
-.list-photo .list:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
+.format-deccr-work {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-cokor);
+  border-bottom: 1px solid var(--border-cokor);
+  border-left: 1px solid var(--border-cokor);
 }
 
 .title-work {
-  margin-top: 20px;
   margin-bottom: 4px;
-  margin-left: 24px;
-  margin-right: 24px;
 
   color: var(--primary-text-color);
   font-style: normal;
@@ -399,10 +405,6 @@ p {
   letter-spacing: 0.06em;
 }
 .descr-work {
-  margin-bottom: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
-
   color: var(--descr-text-color);
   font-size: 16px;
   line-height: 1.88;
